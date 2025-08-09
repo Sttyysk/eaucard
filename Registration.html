@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 8px 15px; /* 缩小高度四分之一 */
+            border: 1px solid black; /* 添加黑色边框 */
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #f0f0f0;
+        }
+        .input-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* 确保子元素从顶部开始排列 */
+            align-items: flex-start; /* 确保所有元素左对齐 */
+            position: relative;
+        }
+        .input-container h2 {
+            margin-bottom: 20px; /* 添加底部间距 */
+            font-weight: bold; /* 加粗 */
+            font-size: 24px; /* 加大字体 */
+        }
+        .input-container input {
+            margin-bottom: 15px; /* 减小间距 */
+            padding: 8px 15px; /* 缩小高度四分之一 */
+            border: 1px solid black; /* 更改为黑色边框 */
+            border-radius: 5px;
+            width: 300px;
+            text-align: center;
+        }
+        .confirm-button {
+            margin-top: 15px; /* 添加顶部间距，使其与输入框间距一致 */
+            margin-bottom: 0; /* 移除底部间距 */
+            padding: 8px 15px; /* 缩小高度四分之一 */
+            border: 1px solid black; /* 添加黑色边框 */
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            width: 100px; /* 缩小宽度 */
+        }
+        .confirm-button:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+    <title>返回按钮示例</title>
+</head>
+<body>
+    <!-- 返回按钮 -->
+    <button class="back-button" onclick="window.location.href='http://192.168.0.124:2042/'">返回</button>
+
+    <div class="input-container">
+        <!-- 标题 -->
+        <h2>Apcta</h2>
+        <!-- 邮箱输入框 -->
+        <input type="email" id="email" placeholder="邮箱">
+        <!-- 用户名输入框 -->
+        <input type="text" id="username" placeholder="用户名">
+        <!-- 其他信息输入框 -->
+        <input type="text" id="additionalInput" placeholder="密码">
+        <!-- 确认按钮 -->
+        <button class="confirm-button">确认</button>
+    </div>
+
+    <script>
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' || event.keyCode === 27) {
+                window.location.href = 'http://192.168.0.124:2042/';
+            }
+        });
+    </script>
+</body>
+</html>

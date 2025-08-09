@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页示例</title>
+    <style>
+        .title-container {
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: flex-start; /* 垂直方向顶部对齐 */
+            margin-top: 20%; 
+        }
+        .title {
+            font-size: 100px; /* 字体大小 */
+            font-weight: bold; /* 将字体加粗 */
+            margin: 0; /* 去除默认的外边距 */
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column; /* 竖直排列 */
+            justify-content: center; /* 垂直居中 */
+            align-items: center; /* 水平居中 */
+            margin-top: 20px; /* 距离标题20像素 */
+        }
+        .button {
+            font-size: 24px; /* 按钮字体大小 */
+            font-weight: bold; /* 按钮字体加粗 */
+            color: black; /* 按钮字体颜色 */
+            background-color: transparent; /* 按钮背景透明 */
+            border: 2px solid black; /* 按钮边框 */
+            border-radius: 10px; /* 按钮边角圆润 */
+            padding: 10px 20px; /* 按钮内边距 */
+            margin: 5px 0; /* 按钮间距 */
+            cursor: pointer; /* 鼠标悬停时显示指针 */
+            text-decoration: none; /* 去除链接的下划线 */
+        }
+        .button:hover {
+            background-color: #f0f0f0; /* 鼠标悬停时背景颜色稍微变深 */
+        }
+    </style>
+</head>
+<body>
+    <div class="title-container">
+        <h1 class="title">Apcta</h1>
+    </div>
+    <div class="button-container">
+        <a href="http://192.168.0.124:2042/Log%20in.html" class="button">登录</a>
+        <a href="http://192.168.0.124:2042/Registration.html" class="button">注册</a>
+    </div>
+</body>
+</html>
